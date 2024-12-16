@@ -1,6 +1,9 @@
 import os
 from restack_ai import Restack
+from restack_ai.restack import CloudConnectionOptions
 from dotenv import load_dotenv
+
+load_dotenv()
 
 connection_options = CloudConnectionOptions(
     engine_id=os.getenv('RESTACK_ENGINE_ID'),
