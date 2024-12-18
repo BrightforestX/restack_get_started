@@ -1,12 +1,10 @@
 import asyncio
 import time
-from restack_ai import Restack
 from restack_ai.restack import ScheduleSpec, ScheduleIntervalSpec
 from datetime import timedelta
+from src.client import client
 
 async def main():
-
-    client = Restack()
 
     workflow_id = f"{int(time.time() * 1000)}-GreetingWorkflow"
     await client.schedule_workflow(
